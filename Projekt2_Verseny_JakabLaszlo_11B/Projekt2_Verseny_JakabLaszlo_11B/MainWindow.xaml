@@ -18,9 +18,9 @@
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="420" Margin="180,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="3" Margin="30,210,0,0" Stroke="Black" VerticalAlignment="Top" Width="720" Grid.ColumnSpan="2"/>
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="3" Margin="30,350,0,0" Stroke="Black" VerticalAlignment="Top" Width="720" Grid.ColumnSpan="2"/>
-        <Image x:Name="koriVapor" HorizontalAlignment="Left" Height="140" Margin="32,70,0,0" VerticalAlignment="Top" Width="717" Source="2xpro.png" Grid.ColumnSpan="2"/>
-        <Image x:Name="koriSupreme" HorizontalAlignment="Left" Height="125" Margin="32,215,0,0" VerticalAlignment="Top" Width="717" Source="2ssprp.png" Grid.ColumnSpan="2"/>
-        <Image x:Name="koriNexus" HorizontalAlignment="Left" Height="123" Margin="32,355,0,0" VerticalAlignment="Top" Width="718" Source="2npro.png" Grid.ColumnSpan="2"/>
+        <Image x:Name="koriVapor" HorizontalAlignment="Left" Height="140" Margin="37,70,-1830,0" VerticalAlignment="Top" Width="2605" Source="2xpro.png" Grid.ColumnSpan="2"/>
+        <Image x:Name="koriSupreme" HorizontalAlignment="Left" Height="125" Margin="34,215,-1830,0" VerticalAlignment="Top" Width="2608" Source="2ssprp.png" Grid.ColumnSpan="2"/>
+        <Image x:Name="koriNexus" HorizontalAlignment="Left" Height="123" Margin="32,355,-1838,0" VerticalAlignment="Top" Width="2610" Source="2npro.png" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5"/>
         <Label x:Name="rajtSzovege" Content="Rajt" HorizontalAlignment="Left" Height="140" Margin="79,245,0,0" VerticalAlignment="Top" Width="324" FontSize="100" FontFamily="Showcard Gothic" RenderTransformOrigin="0.5,0.5" Foreground="#FFFBFBFB">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -43,6 +43,6 @@
             </UIElement.RenderTransform>
         </Label>
         <Label Content="A bajnokság állása:" HorizontalAlignment="Left" Height="37" Margin="36,498,0,0" VerticalAlignment="Top" Width="169" FontSize="16"/>
-        <Rectangle x:Name="vegeAVersenynek" Grid.Column="1" Fill="Black" HorizontalAlignment="Left" Height="420" Margin="213,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
+        <Rectangle x:Name="vegeVonal" Grid.Column="1" Fill="Black" HorizontalAlignment="Left" Height="420" Margin="215,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="12"/>
     </Grid>
 </Window>
