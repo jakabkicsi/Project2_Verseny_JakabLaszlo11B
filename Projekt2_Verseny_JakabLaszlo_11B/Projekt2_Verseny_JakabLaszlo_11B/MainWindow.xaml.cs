@@ -29,11 +29,17 @@ namespace Projekt2_Verseny_JakabLaszlo_11B
         {
             InitializeComponent();
             idozito = new DispatcherTimer();
-            idozito.Interval = TimeSpan.FromSeconds(0.6);
+            idozito.Interval = TimeSpan.FromSeconds(1);
             idozito.Tick += new EventHandler(IdozitoFeladata);
 
-            ujfutamGomb.IsEnabled = false;
+           
         }
+
+        private SolidColorBrush[] szinek = new SolidColorBrush[3]
+        {
+             Brushes.Green, Brushes.Red, Brushes.Gray
+        };
+
 
         private void IdozitoFeladata(object sender, EventArgs e)
         {
@@ -43,26 +49,53 @@ namespace Projekt2_Verseny_JakabLaszlo_11B
 
             ++idoSzamlalo;
             koriVapor.Margin = new Thickness(idoSzamlalo *koriVapor.Margin.Left * vapor , 70, 0, 0);
-            koriSupreme.Margin = new Thickness(idoSzamlalo *koriSupreme.Margin.Left* supreme, 215, 0, 0);
-            koriNexus.Margin = new Thickness(idoSzamlalo *koriNexus.Margin.Left* nexus, 355, 0, 0);
+            koriSupreme.Margin = new Thickness(idoSzamlalo *koriSupreme.Margin.Left * supreme, 215, 0, 0);
+            koriNexus.Margin = new Thickness(idoSzamlalo *koriNexus.Margin.Left * nexus, 355, 0, 0);
 
-            if (koriVapor.Margin.Left >= vegeVonal.Margin.Left + 5*79)
+            if (koriVapor.Margin.Left >= vegeVonal.Margin.Left + 420)
             {
-                koriVapor.Margin = new Thickness(vegeVonal.Margin.Left + 5*79, 70, 0, 0);
-            }
-            
-            if (koriSupreme.Margin.Left >= vegeVonal.Margin.Left + 5 * 79)
-            {
-                koriSupreme.Margin = new Thickness(vegeVonal.Margin.Left + 5 * 79, 215, 0, 0);
-            }
-            
-            if (koriNexus.Margin.Left >= vegeVonal.Margin.Left + 5 * 79)
-            {
-                koriNexus.Margin = new Thickness(vegeVonal.Margin.Left + 5 * 79, 355, 0, 0);
+                koriVapor.Margin = new Thickness(vegeVonal.Margin.Left + 420, 70, 0, 0);
+                
             }
 
+            if (koriSupreme.Margin.Left >= vegeVonal.Margin.Left + 420)
+            {
+                koriSupreme.Margin = new Thickness(vegeVonal.Margin.Left + 420, 215, 0, 0);
+            }
+
+            if (koriNexus.Margin.Left >= vegeVonal.Margin.Left + 420)
+            {
+                koriNexus.Margin = new Thickness(vegeVonal.Margin.Left + 420, 355, 0, 0);
+            }
             
-         
+            
+            if (koriVapor.Margin.Left + 420 >= vegeVonal.Margin.Left + 420 && koriNexus.Margin.Left >= vegeVonal.Margin.Left + 420 && koriSupreme.Margin.Left >= vegeVonal.Margin.Left + 420)
+            {
+                ujfutamGomb.IsEnabled = true;
+                
+            }
+
+            if (koriVapor.Margin.Left  >= vegeVonal.Margin.Left + 420)
+            {
+                
+                
+                eredmenyek.Content = "Az első korcsolya győzőtt" + " 3p";
+                eredmenyek.FontSize = 20;
+
+
+            }
+            if (koriSupreme.Margin.Left >= vegeVonal.Margin.Left + 420)
+            {
+                eredmenyek.Content = "Az második korcsolya győzőtt" + " 3p";
+                eredmenyek.FontSize = 20;
+            }
+            if (koriNexus.Margin.Left  >= vegeVonal.Margin.Left + 420)
+            {
+                eredmenyek.Content = "A harmadik korcsolya győzőtt" + " 3p";
+                eredmenyek.FontSize = 20;
+
+            }
+           
         }
 
         private void startGomb_Click(object sender, RoutedEventArgs e)
@@ -70,15 +103,28 @@ namespace Projekt2_Verseny_JakabLaszlo_11B
             idozito.Start();
             startGomb.IsEnabled = false;
             ujfutamGomb.IsEnabled = false;
+          
         }
 
         private void ujfutamGomb_Click(object sender, RoutedEventArgs e)
         {
-            koriVapor.Margin = new Thickness(idoSzamlalo * 32, 70, 0, 0);
-            koriSupreme.Margin = new Thickness(idoSzamlalo * 32, 215, 0, 0);
-            koriNexus.Margin = new Thickness(idoSzamlalo * 32, 355, 0, 0);
+            
+            idozito.Stop();
+            ujfutamGomb.IsEnabled = true;
+            koriVapor.Margin = new Thickness( 32, 70, 0, 0);
+            koriSupreme.Margin = new Thickness( 32, 215, 0, 0);
+            koriNexus.Margin = new Thickness( 32, 355, 0, 0);
+            eredmenyek.Content = "";
+            
+
+           
+            startGomb.IsEnabled = true;
+        }
+
+        private void ujbajnoksagGomb_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("");
         }
     }
-
-    
+  
 }

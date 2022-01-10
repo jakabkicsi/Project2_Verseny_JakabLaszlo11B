@@ -13,14 +13,14 @@
         </Grid.ColumnDefinitions>
         <Button x:Name="startGomb" Content="Start" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" Width="100" Click="startGomb_Click"/>
         <Button x:Name="ujfutamGomb" Content="Új futam" HorizontalAlignment="Left" Margin="158,30,0,0" VerticalAlignment="Top" Width="100" Click="ujfutamGomb_Click"/>
-        <Button Content="Új bajnokság" HorizontalAlignment="Left" Margin="290,30,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="ujbajnoksagGomb" Content="Új bajnokság" HorizontalAlignment="Left" Margin="290,30,0,0" VerticalAlignment="Top" Width="100" Click="ujbajnoksagGomb_Click"/>
         <Rectangle Fill="#FFB9B9C7" HorizontalAlignment="Left" Height="420" Margin="30,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="720" Grid.ColumnSpan="2"/>
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="420" Margin="180,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="3" Margin="30,210,0,0" Stroke="Black" VerticalAlignment="Top" Width="720" Grid.ColumnSpan="2"/>
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="3" Margin="30,350,0,0" Stroke="Black" VerticalAlignment="Top" Width="720" Grid.ColumnSpan="2"/>
-        <Image x:Name="koriVapor" HorizontalAlignment="Left" Height="140" Margin="37,70,-1830,0" VerticalAlignment="Top" Width="2605" Source="2xpro.png" Grid.ColumnSpan="2"/>
-        <Image x:Name="koriSupreme" HorizontalAlignment="Left" Height="125" Margin="34,215,-1830,0" VerticalAlignment="Top" Width="2608" Source="2ssprp.png" Grid.ColumnSpan="2"/>
-        <Image x:Name="koriNexus" HorizontalAlignment="Left" Height="123" Margin="32,355,-1838,0" VerticalAlignment="Top" Width="2610" Source="2npro.png" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5"/>
+        <Image x:Name="koriVapor" HorizontalAlignment="Left" Height="120" Margin="30,70,0,0" VerticalAlignment="Top" Width="731" Source="alma1.jpg" Grid.ColumnSpan="2"/>
+        <Image x:Name="koriSupreme" HorizontalAlignment="Left" Height="120" Margin="30,215,0,0" VerticalAlignment="Top" Width="732" Source="alma2.jpg" Grid.ColumnSpan="2"/>
+        <Image x:Name="koriNexus" HorizontalAlignment="Left" Height="120" Margin="30,355,0,0" VerticalAlignment="Top" Width="732" Source="kocsola.png" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
         <Label x:Name="rajtSzovege" Content="Rajt" HorizontalAlignment="Left" Height="140" Margin="79,245,0,0" VerticalAlignment="Top" Width="324" FontSize="100" FontFamily="Showcard Gothic" RenderTransformOrigin="0.5,0.5" Foreground="#FFFBFBFB">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -42,7 +42,8 @@
                 </TransformGroup>
             </UIElement.RenderTransform>
         </Label>
-        <Label Content="A bajnokság állása:" HorizontalAlignment="Left" Height="37" Margin="36,498,0,0" VerticalAlignment="Top" Width="169" FontSize="16"/>
-        <Rectangle x:Name="vegeVonal" Grid.Column="1" Fill="Black" HorizontalAlignment="Left" Height="420" Margin="215,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="12"/>
+        <Label Content="A bajnokság állása:" HorizontalAlignment="Left" Height="50" Margin="41,523,0,0" VerticalAlignment="Top" Width="169" FontSize="18"/>
+        <Rectangle x:Name="vegeVonal" Fill="Black" HorizontalAlignment="Left" Height="420" Margin="215,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="12" Grid.Column="1"/>
+        <Label x:Name="eredmenyek" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Height="68" Margin="234,516,0,0" VerticalAlignment="Top" Width="398"/>
     </Grid>
 </Window>
