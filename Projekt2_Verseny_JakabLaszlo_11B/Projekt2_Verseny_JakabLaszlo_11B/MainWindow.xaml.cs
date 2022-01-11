@@ -48,9 +48,9 @@ namespace Projekt2_Verseny_JakabLaszlo_11B
             int nexus = rnd.Next(1, 3);
 
             ++idoSzamlalo;
-            koriVapor.Margin = new Thickness(idoSzamlalo *koriVapor.Margin.Left * vapor , 70, 0, 0);
-            koriSupreme.Margin = new Thickness(idoSzamlalo *koriSupreme.Margin.Left * supreme, 215, 0, 0);
-            koriNexus.Margin = new Thickness(idoSzamlalo *koriNexus.Margin.Left * nexus, 355, 0, 0);
+            koriVapor.Margin = new Thickness(koriVapor.Margin.Left * vapor , 70, 0, 0);
+            koriSupreme.Margin = new Thickness(koriSupreme.Margin.Left * supreme, 215, 0, 0);
+            koriNexus.Margin = new Thickness(koriNexus.Margin.Left * nexus, 355, 0, 0);
 
             if (koriVapor.Margin.Left >= vegeVonal.Margin.Left + 420)
             {
